@@ -82,7 +82,7 @@ const initSudoku=()=>{
     resetBg();
 
     su=sudokuGen(level);
-    su_answer=[...su.question];
+    su_answer=su.question.map(row => [...row]);
 
     seconds=0;
     
@@ -277,6 +277,8 @@ const initNumberInputEvent=()=>{
                     showResult();
                 }
                 
+            }else{
+                console.log("Hello Anupam")
             }
         })
     })
